@@ -1,0 +1,11 @@
+body{
+    background-color: whitesmoke;
+}
+
+a{
+    color: #001170
+}
+
+a:hover{
+    color: darkblue;
+}

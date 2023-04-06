@@ -1,0 +1,17 @@
+.intro-message {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.intro-message h1{
+    color: #00ffea;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.intro-message h3{
+    color: #000000;
+    font-weight: bold;
+}

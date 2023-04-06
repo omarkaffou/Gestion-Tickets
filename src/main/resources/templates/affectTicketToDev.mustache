@@ -1,0 +1,22 @@
+{{>layout/header}}
+<h1 class="h3 mb-2 text-gray-800">Affectation d'un incident pour un développeur</h1>
+<form action="/admin/affect" method="POST">
+  <div class="form-group">
+    <label for="tickets">Incident</label>
+    <select class="form-control" id="tickets" name="ticketId">
+    {{#tickets}}
+        <option value="{{id}}">{{description}}</option>
+    {{/tickets}}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="tickets">Développeur</label>
+    <select class="form-control" id="devs" name="devId">
+    {{#devs}}
+        <option value="{{id}}">{{displayName}}</option>
+    {{/devs}}
+    </select>
+  </div>
+  <input type="submit" class="btn btn-primary" value="Affecter" />
+</form>
+{{>layout/footer}}

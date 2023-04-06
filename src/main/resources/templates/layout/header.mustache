@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/ticket-ist.css">
+    <title>Tickets management</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="/">Gestion des incidents</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <span class="navbar-text">
+                     {{name}}
+                </span>
+            <ul class="navbar-nav mr-auto">
+            {{#admin}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/tickets">TIckets list</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/apps">App list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/apps/add">Add application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/affect">Ticket affectation</a>
+                </li>
+            {{/admin}}
+            {{#client}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/client/{{id}}/tickets">Tickets list</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/client/tickets/add">Add Ticket</a>
+                </li>
+            {{/client}}
+            {{#dev}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/dev/{{id}}/tickets">Tickets list</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dev/{{id}}/status">Tickets update</span></a>
+                </li>
+            {{/dev}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">sign out</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0"><input class="form-control mr-sm-2" type="search"
+                    placeholder="Search" aria-label="Search"><button class="btn btn-outline-primary my-2 my-sm-0"
+                    type="submit">Search</button></form>
+        </div>
+    </nav>
+
+    <div class="container">

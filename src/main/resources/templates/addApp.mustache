@@ -1,0 +1,10 @@
+{{>layout/header}}
+<h1 class="h3 mb-2 text-gray-800">Ajouter une application</h1>
+<form name="app" action="/admin/apps/add" method="POST">
+  <div class="form-group">
+      <label for="name">Nom d'application</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter une application ">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Ajouter" style="width: 80px" />
+</form>
+{{>layout/footer}}
